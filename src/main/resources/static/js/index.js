@@ -23,9 +23,9 @@ var modalButton = document.getElementById("modalButton");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-modalButton.onclick = function() {
-    modal.style.display = "block";
-}
+//modalButton.onclick = function() {
+//    modal.style.display = "block";
+//}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -38,4 +38,13 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+var addResButton = document.getElementById('plus');
+var link = document.getElementById('addResContent');
+
+addResButton.onclick = function() {
+	link.style.display == 'none' ? link.style.display = 'block' : link.style.display = 'none';
+//	link.style.visibility = 'hidden';
+}
+
 
