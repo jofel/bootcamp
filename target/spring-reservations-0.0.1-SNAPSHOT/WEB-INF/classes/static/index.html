@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reservation Portal</title>
+
+<!-- <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" -->
+<!-- 	rel="stylesheet"> -->
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/modal.css" />
+<link rel="stylesheet" type="text/css" href="css/media.css" />
+</head>
+<body>
+	<video autoplay muted loop id="myVideo">
+		<source src="video/wall.mp4" type="video/mp4">
+		Your browser does not support HTML5 video.
+	</video>
+	<div id="pause">
+		<button id="videoButton" onclick="myFunction()">
+<!-- 			<i class="fas fa-2x fa-pause"></i> -->
+		</button>
+	</div>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">&times;</span>
+				<h2>Modal Header</h2>
+			</div>
+			<div class="modal-body"></div>
+			<div class="modal-footer">
+				<h3>Modal Footer</h3>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="content" id="addResContent">
+		<form id="reservationForm">
+			<div class="row">
+				<div class="col-5">
+					<label>Facility ID:</label>
+				</div>
+				<div class="col-7">
+					<input name="resourceId" type="text" size="19" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-5">
+					<label>Start Date:</label>
+				</div>
+				<div class="col-7">
+					<input name="fromDate" type="date" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-5">
+					<label>End Date:</label>
+				</div>
+				<div class="col-7">
+					<input name="toDate" type="date" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-5">
+					<label>Reserved By:</label>
+				</div>
+				<div class="col-7">
+					<input name="owner" type="text" size="19" />
+				</div>
+			</div>
+			<div class="row center">
+				<div>
+<!-- 					<i id="submitReservation" class="fas fa-3x fa-paper-plane"></i> -->
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="content" id="listResContent">
+		<div id="system-error" class="message">We are sorry, retrieving
+			the list of reservations failed - please try again later.</div>
+		</h2>
+		<div id="action-error" class="message">We are sorry, we were
+			unable to execute your action - please try again later.</div>
+		</h2>
+
+		<div id="reservation-list">
+			<!-- the content will be placed here -->
+		</div>
+
+		<script id="reservation-list-template"
+			type="text/x-handlebars-template">  
+   	 <table>
+     	 <caption>List of reservations</caption>
+    	  <thead>
+     	   <tr>
+       	   <th>R.ID</th>
+       	   <th>F.ID</th>
+       	   <th>Start</th>
+        	  <th>End</th>
+        	  <th>By</th>
+         	 <th>Del</th>
+      	  </tr>
+     	 </thead>
+    	  <tbody>
+  	  {{#each content}}  
+      	  <tr>                    
+        	  <td>{{id}}</td>
+         	 <td>{{resourceId}}</td>
+         	 <td>{{startDate}}</td>            
+          	<td>{{endDate}}</td> 
+         	 <td>{{owner}}</td> 
+         	 <td><a href="#" class="action" reservationId="{{id}}"><i class="fas fa-trash-alt"></i></a>           
+       	 </tr>
+    	{{/each}}
+      	</tbody>
+    	</table>
+  	</script>	
+	</div>
+
+
+
+	<div class="navbar row">
+		<div class="center button" id="addResButton">
+			<div id="plus-button-lg" class="col-3">
+<!-- 				<i class="fas fa-8x fa-plus-square"></i> -->
+			</div>
+			<div id="plus-button-sm" class="col-3">
+<!-- 				<i class="fas fa-4x fa-plus-square"></i> -->
+			</div>
+		</div>
+
+		<div class="col-6 center">
+			<h1>Home</h1>
+			<p id="welcome">Lorem ipsum dolor sit amet, an his etiam
+				torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis
+				neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum
+				tractatos ei. Id qui nemore latine molestiae, ad mutat oblique
+				delicatissimi pro.</p>
+		</div>
+		<div class="center button" id="listResButton">
+			<div id="list-button-lg" class="col-3">
+<!-- 				<i class="fas fa-8x fa-list-alt"></i> -->
+			</div>
+			<div id="list-button-sm" class="col-3">
+<!-- 				<i class="fas fa-4x fa-list-alt"></i> -->
+			</div>
+		</div>
+	</div>
+	<!-- 	<div class="row"> -->
+	<!-- 		<button class="grid-item" id="modalButton">Open Modal</button> -->
+	<!-- 	</div> -->
+
+	<script src="js/index.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="js/reservation.js"></script>
+  <script src="js/lib/handlebars-v3.0.0.js"></script>
+  <script src="js/reservation-list.js"></script>
+</body>
+</html>
