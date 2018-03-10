@@ -10,7 +10,7 @@
 
 $(document).ready(function() {
 
-  function loadAndDisplayListOfReservations() {
+function loadAndDisplayListOfReservations() {
     
     $('.message').hide();
     
