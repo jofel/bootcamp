@@ -1,0 +1,134 @@
+.fas {
+	color: lightgray;
+}
+.fas:hover {
+	color: red;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Arial;
+	font-size: 17px;
+}
+
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: -1;
+	
+}
+
+#pause {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.content {
+	position: fixed;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.7);
+	color: #f1f1f1;
+	width: 100%;
+	padding: 10px;
+}
+
+#videoButton {
+	padding: 10px;
+	border: none;
+	background: rgba(0, 0, 0, 0);
+	color: #fff;
+	cursor: pointer;
+}
+
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+[class*="col-"] {
+	float: left;
+	padding: 15px;
+/* 	 border: 1px solid red; */
+}
+
+.col-1 {
+	width: 8.33%;
+}
+
+.col-2 {
+	width: 16.66%;
+}
+
+.col-3 {
+	width: 25%;
+}
+
+.col-4 {
+	width: 33.33%;
+}
+
+.col-5 {
+	width: 41.66%;
+}
+
+.col-6 {
+	width: 50%;
+}
+
+.col-7 {
+	width: 58.33%;
+}
+
+.col-8 {
+	width: 66.66%;
+}
+
+.col-9 {
+	width: 75%;
+}
+
+.col-10 {
+	width: 83.33%;
+}
+
+.col-11 {
+	width: 91.66%;
+}
+
+.col-12 {
+	width: 100%;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+
+
+.content .plus-button-lg:hover {
+	background-color: black;
+}
+.button:hover {
+	background-color: yellow;
+}
+.container {
+	margin:0 auto;
+	background: rgba(0, 0, 0, 0.5);
+	color: #f1f1f1;
+	width: 30%;
+	padding: 10px;
+}

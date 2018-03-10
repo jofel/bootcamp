@@ -5,8 +5,94 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reservation Portal</title>
 
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/modal.css" />
+<link rel="stylesheet" type="text/css" href="css/media.css" />
 </head>
 <body>
-		<script src="js/index.js"></script>
+	<video autoplay muted loop id="myVideo">
+		<source src="video/wall.mp4" type="video/mp4">
+		Your browser does not support HTML5 video.
+	</video>
+	<div id="pause">
+		<button id="videoButton" onclick="myFunction()">
+			<i class="fa fa-2x fa-pause"></i>
+		</button>
+	</div>
+
+	<div class="container">
+		<form id="reservationForm">
+			<div class="row">
+				<div class="col-6">
+					<label>Facility ID:</label>
+				</div>
+				<div class="col-6">
+					<input name="resourceId" type="input"  size="16" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label>Start Date:</label>
+				</div>
+				<div class="col-6">
+					<input name="fromDate" type="date" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label>End Date:</label>
+				</div>
+				<div class="col-6">
+					<input name="toDate" type="date" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<label>Reserved By:</label>
+				</div>
+				<div class="col-6">
+					<input name="owner" type="input" size="16" />
+				</div>
+			</div>
+			<div class="row center">
+				<button id="submitReservation">Place Reservation</button>
+			</div>
+		</form>
+	</div>
+
+
+
+	<div class="content row">
+		<a class="center button" id="resAdd" href="/reservation.html">
+			<div id="plus-button-lg" class="col-3">
+				<i class="fas fa-10x fa-plus-square"></i>
+			</div>
+			<div id="plus-button-sm" class="col-3">
+				<i class="fas fa-5x fa-plus-square"></i>
+			</div>
+		</a>
+
+		<div class="col-6 center">
+			<h1>Home</h1>
+			<p id="welcome">Lorem ipsum dolor sit amet, an his etiam
+				torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis
+				neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum
+				tractatos ei. Id qui nemore latine molestiae, ad mutat oblique
+				delicatissimi pro.</p>
+		</div>
+		<a class="center button" id="resAdd" href="/reservation.html">
+			<div id="list-button-lg" class="col-3">
+				<i class="fas fa-10x fa-list-alt"></i>
+			</div>
+			<div id="list-button-sm" class="col-3">
+				<i class="fas fa-5x fa-list-alt"></i>
+			</div>
+		</a>
+	</div>
+
+
+	<script src="js/index.js"></script>
 </body>
 </html>
