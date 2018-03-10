@@ -1,0 +1,36 @@
+@media screen and (min-width: 0px) and (max-width: 800px) {
+	#welcome {
+		display: none;
+	} /* show it on small screens */
+	#plus-button-lg {
+		display: none;
+	}
+	#plus-button-sm {
+		display: block;
+	}
+	#list-button-lg {
+		display: none;
+	}
+	#list-button-sm {
+		display: block;
+	}
+	.container{
+		width: 90%;
+		padding: 2px;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#plus-button-lg {
+		display: block;
+	}
+	#plus-button-sm {
+		display: none;
+	}
+	#list-button-lg {
+		display: block;
+	}
+	#list-button-sm {
+		display: none;
+	}
+}
