@@ -5,14 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reservation Portal</title>
 
-<!-- <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" -->
-<!-- 	rel="stylesheet"> -->
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+	rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/index.css" />
 <link rel="stylesheet" type="text/css" href="css/modal.css" />
 <link rel="stylesheet" type="text/css" href="css/media.css" />
 <link rel="stylesheet" type="text/css" href="css/popup.css" />
 </head>
 <body>
+
+<!-- -------------------------------------- Video --------------------------------------- -->
+
 	<video autoplay muted loop id="myVideo">
 		<source src="video/wall.mp4" type="video/mp4">
 		Your browser does not support HTML5 video.
@@ -23,22 +26,7 @@
 		</button>
 	</div>
 
-	<!-- The Modal -->
-	<div id="myModal" class="modal">
-
-		<!-- Modal content -->
-		<div class="modal-content">
-			<div class="modal-header">
-				<span class="close">&times;</span>
-				<h2>Modal Header</h2>
-			</div>
-			<div class="modal-body"></div>
-			<div class="modal-footer">
-				<h3>Modal Footer</h3>
-			</div>
-		</div>
-
-	</div>
+<!-- -------------------------------------- Add reservation --------------------------------------- -->
 
 	<div class="content" id="addResContent">
 		<form id="reservationForm">
@@ -50,7 +38,7 @@
 					<label>Facility ID:</label>
 				</div>
 				<div class="col-7">
-					<input name="resourceId" type="text" size="19" />
+					<input name="resourceId" type="number" size="19" />
 				</div>
 			</div>
 			<div class="row">
@@ -85,6 +73,8 @@
 			</div>
 		</form>
 	</div>
+
+<!-- -------------------------------------- List of reservation --------------------------------------- -->
 
 	<div class="content" id="listResContent">
 		<div id="system-error" class="message">We are sorry, retrieving
@@ -128,7 +118,7 @@
   	</script>	
 	</div>
 
-
+<!-- -------------------------------------- NAVBAR--------------------------------------- -->
 
 	<div class="navbar row">
 		<div class="center button" id="addResButton">
@@ -141,12 +131,11 @@
 		</div>
 
 		<div class="col-6 center">
-			<h1>Home</h1>
-			<p id="welcome">Lorem ipsum dolor sit amet, an his etiam
-				torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis
-				neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum
-				tractatos ei. Id qui nemore latine molestiae, ad mutat oblique
-				delicatissimi pro.</p>
+			<h2>Bungalows</h2>
+			<p id="welcome">
+			On this site you have the option to add reservations (<- left) <br>and reservations to be listed and deleted (right ->). 
+			<br>Good luck friend.
+			</p>
 		</div>
 		<div class="center button" id="listResButton">
 			<div id="list-button-lg" class="col-3">
@@ -157,10 +146,8 @@
 			</div>
 		</div>
 	</div>
-	<!-- 	<div class="row"> -->
-	<!-- 		<button class="grid-item" id="modalButton">Open Modal</button> -->
-	<!-- 	</div> -->
-
+	
+<!-- -------------------------------------- scripts --------------------------------------- -->
 	<script src="js/index.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="js/reservation.js"></script>

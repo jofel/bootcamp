@@ -5,8 +5,6 @@
 "use strict";
 
 var popUp = document.getElementById("myPopup");
-var textSuccess = document.createTextNode("Success!");
-var textError = document.createTextNode("Error!");
 
 (function() {
   
@@ -51,7 +49,8 @@ $(document).ready(function() {
         var reservationId = response.getResponseHeader('reservation-id');
         $('#reservationId').text(reservationId);
         $('#reservation-successful-message').show();
-        popUp.innerHTML = "Success!!!";
+        popUp.innerHTML = "Successfully created!";
+        $('form :input').val('');
       },
                                                 
       error : function(XMLHttpRequest, textStatus, errorThrown) {   
@@ -59,14 +58,12 @@ $(document).ready(function() {
         
         var errorCodeToHtmlIdMap = {400 : '#validation-error', 405 : '#validation-error', 409 : '#conflict-error' , 500: '#system-error'};
         var id = errorCodeToHtmlIdMap[XMLHttpRequest.status];
-        popUp.innerHTML = "Error 1!!!";
+
         if (!id) {
           id =  errorCodeToHtmlIdMap[500]; 
-        } else {
-        	popUp.innerHTML = "Error 2!!!";
         }
-        
-        
+        	
+        popUp.innerHTML = "Fields are required!";
         
         $(id).fadeIn();
       }
