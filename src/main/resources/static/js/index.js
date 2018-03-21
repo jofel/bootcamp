@@ -88,7 +88,12 @@ function loadAndDisplayListOfReservations() {
         $('#system-error').fadeIn();
       }
     });
-  }
+}
+
+function showPopUp() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
 
 
 

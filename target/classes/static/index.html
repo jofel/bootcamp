@@ -10,6 +10,7 @@
 <link rel="stylesheet" type="text/css" href="css/index.css" />
 <link rel="stylesheet" type="text/css" href="css/modal.css" />
 <link rel="stylesheet" type="text/css" href="css/media.css" />
+<link rel="stylesheet" type="text/css" href="css/popup.css" />
 </head>
 <body>
 	<video autoplay muted loop id="myVideo">
@@ -76,9 +77,10 @@
 					<input name="owner" type="text" size="19" />
 				</div>
 			</div>
-			<div class="row center">
-				<div>
+			<div class="row center top-pad">
+				<div class="popup" onclick="showPopUp()">
 					<i id="submitReservation" class="fas fa-3x fa-paper-plane"></i>
+					<span class="popuptext" id="myPopup"></span>
 				</div>
 			</div>
 		</form>
